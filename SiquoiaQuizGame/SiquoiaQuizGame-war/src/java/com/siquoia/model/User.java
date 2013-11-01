@@ -9,10 +9,11 @@ package com.siquoia.model;
  * @author PC
  */
 public abstract class User {
-    private String userName;
-    private String password;
-    private String email;
-    private long userId;
+    private Achievement achievement;
+    private String      userName;
+    private String      password;
+    private String      email;
+    private long        userId;
     
     public User(String userName, String password, String email, long userId){
         this.userId = userId;
@@ -21,8 +22,20 @@ public abstract class User {
         this.userName = userName;
     }
     
+    public User(String userName, String password, String email, long userId, Achievement achievement){
+        this.userId = userId;
+        this.email = email;
+        this.password = password;
+        this.userName = userName;
+        this.achievement = achievement;
+    }
+    
     public long getUserId(){
         return userId;
+    }
+    
+    public Achievement getAchievement(){
+        return achievement;
     }
     
     public String getUserName(){
