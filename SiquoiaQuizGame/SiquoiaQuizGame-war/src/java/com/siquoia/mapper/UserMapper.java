@@ -4,7 +4,7 @@
  */
 package com.siquoia.mapper;
 
-import com.siquoia.dummy.DummyDB;
+import com.siquoia.dbconnection.DummyDB;
 import com.siquoia.exception.AuthenticationException;
 import com.siquoia.model.User;
 

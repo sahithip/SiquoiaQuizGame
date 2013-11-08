@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.siquoia.dummy;
+package com.siquoia.dbconnection;
 
 import com.siquoia.model.Player;
 import com.siquoia.model.User;
