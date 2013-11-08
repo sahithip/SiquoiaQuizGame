@@ -1,5 +1,5 @@
 create table user(
-    user_id number,
+    user_id bigint,
     user_name varchar(45),
     password varchar(45),
     email varchar(45),
@@ -11,28 +11,33 @@ create table user(
 );
 
 
-create table title(
-    title_id number,
-    submit_level number,
-    answer_level number,
+create table answer_title(
+    title_id bigint,
     title_name varchar(100),
     primary key(title_id)
 );
 
+create table submit_title(
+	title_id bigint,
+    title_name varchar(100),
+    primary key(title_id)
+);
+
+
 create table achievement(
-    user_id number,
-    played_quizzes number,
-    submit_level number,
-    answer_level number,
-    no_of_titles number,
-    reward_points number,
-    primary key(user_id) references user(user_id),
-    foreign key(answer_level) references title(answer_level),
-    foreign key(submit_level) references title(submit_level)
+    user_id bigint primary key,
+    played_quizzes bigint,
+    submit_level bigint,
+    answer_level bigint,
+    no_of_titles bigint,
+    reward_points bigint,
+	foreign key(user_id) references user(user_id),
+	foreign key(submit_level) references submit_title(title_id),
+	foreign key(answer_level) references answer_title(title_id)
 );
 
 create table admin(
-    user_id number,
+    user_id bigint,
     user_name varchar(45),
     password varchar(45),
     email varchar(45),
@@ -41,27 +46,27 @@ create table admin(
 );
 
 create table category(
-    category_id number,
-    parent_id number,
+    category_id bigint,
+    parent_id bigint,
     name varchar(45),
     primary key(category_id),
     foreign key(parent_id) references category(category_id)
 );
 
 create table quiz(
-    quiz_id number,
-    user_id number,
-    correct_answers number,
+    quiz_id bigint,
+    user_id bigint,
+    correct_answers bigint,
     name varchar(45),
-    category_id number,
+    category_id bigint,
     primary key(quiz_id),
     foreign key(category_id) references category(category_id),
     foreign key(user_id) references user(user_id)
 );
 
 create table question(
-    question_id number,
-    category_id number,
+    question_id bigint,
+    category_id bigint,
     question varchar(500),
     option1 varchar(500),
     option2 varchar(500),
@@ -72,9 +77,9 @@ create table question(
 );
 
 create table payment(
-    payment_id number,
-    user_id number,
-    item_id number,
+    payment_id bigint,
+    user_id bigint,
+    item_id bigint,
     payment_type varchar(100),
     primary key(payment_id),
     foreign key(user_id) references user(user_id),
