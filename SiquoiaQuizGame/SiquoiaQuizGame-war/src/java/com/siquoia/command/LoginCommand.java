@@ -6,7 +6,7 @@ package com.siquoia.command;
 
 import com.siquoia.exception.AuthenticationException;
 import com.siquoia.exception.CommandException;
-import com.siquoia.imbl.LoginIMBL;
+import com.siquoia.imbl.LoginIMPL;
 import com.siquoia.model.User;
 import javax.servlet.http.HttpServletRequest;
 
@@ -16,11 +16,11 @@ import javax.servlet.http.HttpServletRequest;
  */
 public class LoginCommand extends TargetCommand{
     
-    private LoginIMBL loginIMBL;
+    private LoginIMPL loginIMBL;
 
     public LoginCommand(String target) {
         super(target);
-        loginIMBL = new LoginIMBL();
+        loginIMBL = new LoginIMPL();
     }
 
     @Override

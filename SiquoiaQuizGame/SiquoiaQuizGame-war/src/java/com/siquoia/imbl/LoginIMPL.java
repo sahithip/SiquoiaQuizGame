@@ -12,7 +12,7 @@ import com.siquoia.model.User;
  *
  * @author PC
  */
-public class LoginIMBL {
+public class LoginIMPL {
     DBManager manager = DBManager.getInstance();
     
     public User login(String userName, String password) throws AuthenticationException{
