@@ -6,7 +6,7 @@ package com.siquoia.command;
 
 import com.siquoia.exception.AuthenticationException;
 import com.siquoia.exception.CommandException;
-import com.siquoia.imbl.LoginIMPL;
+import com.siquoia.impl.LoginIMPL;
 import com.siquoia.model.User;
 import javax.servlet.http.HttpServletRequest;
 

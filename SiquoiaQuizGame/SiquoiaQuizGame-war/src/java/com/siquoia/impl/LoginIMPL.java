@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.siquoia.imbl;
+package com.siquoia.impl;
 
 import com.siquoia.control.DBManager;
 import com.siquoia.exception.AuthenticationException;
