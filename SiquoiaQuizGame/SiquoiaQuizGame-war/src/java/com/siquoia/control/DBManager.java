@@ -5,6 +5,7 @@
 package com.siquoia.control;
 
 import com.siquoia.exception.AuthenticationException;
+import com.siquoia.exception.NotFoundException;
 import com.siquoia.mapper.LeaderboardMapper;
 import com.siquoia.mapper.QuizMapper;
 import com.siquoia.mapper.UserMapper;
@@ -33,6 +34,13 @@ public class DBManager {
     }
     
     public User getUser(String userName, String password) throws AuthenticationException{
-        return uMapper.getUser(userName, password);  
+        User user;
+        try{
+            user = uMapper.getUser(userName, password);
+        }catch(NotFoundException nfe){
+            throw new AuthenticationException("User not authenticated");
+        }
+        
+        return user;
     }
 }

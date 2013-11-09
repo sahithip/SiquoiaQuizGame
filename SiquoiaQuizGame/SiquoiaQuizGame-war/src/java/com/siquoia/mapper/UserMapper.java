@@ -5,7 +5,7 @@
 package com.siquoia.mapper;
 
 import com.siquoia.dbconnection.DummyDB;
-import com.siquoia.exception.AuthenticationException;
+import com.siquoia.exception.NotFoundException;
 import com.siquoia.model.User;
 
 /**
@@ -24,13 +24,7 @@ public class UserMapper {
         return db.getUser(userId);
     }
     
-    public User getUser(String userName, String password) throws AuthenticationException{
-        User user = db.getUser(userName);
-        if(user.getPassword().equals(password)){
-            return user;
-        }
-        else{
-            throw new AuthenticationException("/login.jsp");
-        }
+    public User getUser(String userName, String password) throws NotFoundException{
+        return db.getUser(userName);
     }
 }

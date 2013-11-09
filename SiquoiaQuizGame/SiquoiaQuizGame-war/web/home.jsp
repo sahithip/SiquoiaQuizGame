@@ -15,5 +15,6 @@
         <h1>LOGGED IN AND ON HOMEPAGE</h1>
         User name: ${loggedIn.userName}
         User ID:   ${loggedIn.userId}
+        <a href="SiquoiaFrontController?command=logout">Logout</a>
     </body>
 </html>

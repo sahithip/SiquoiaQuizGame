@@ -20,6 +20,7 @@ public class LoginCommand extends TargetCommand{
 
     public LoginCommand(String target) {
         super(target);
+        loginIMBL = new LoginIMBL();
     }
 
     @Override
