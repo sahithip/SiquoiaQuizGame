@@ -4,10 +4,9 @@
  */
 package com.siquoia.command;
 
-import com.siquoia.control.DBManager;
 import com.siquoia.exception.AuthenticationException;
 import com.siquoia.exception.CommandException;
-import com.siquoia.model.Player;
+import com.siquoia.imbl.LoginIMBL;
 import com.siquoia.model.User;
 import javax.servlet.http.HttpServletRequest;
 
@@ -17,7 +16,7 @@ import javax.servlet.http.HttpServletRequest;
  */
 public class LoginCommand extends TargetCommand{
     
-    private DBManager manager = DBManager.getInstance();
+    private LoginIMBL loginIMBL;
 
     public LoginCommand(String target) {
         super(target);
@@ -29,14 +28,14 @@ public class LoginCommand extends TargetCommand{
         String password = request.getParameter("password");
         User user;
         try{
-           user = manager.login(userName, password);
+           user = loginIMBL.login(userName, password);
         }
         catch(AuthenticationException ae){
+            request.getSession().removeAttribute("loggedIn");
             throw new CommandException("Login Command", ae.getMessage(), ae);
         }
         
-        request.setAttribute("userId", user.getUserId());
-        request.setAttribute("userName", user.getUserName());
+        request.getSession().setAttribute("loggedIn", user);
         
         return super.execute(request);
     }

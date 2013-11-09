@@ -32,9 +32,7 @@ public class DBManager {
         return instance;
     }
     
-    /* DUMMY METHODS */
-    
-    public User login(String userName, String password) throws AuthenticationException{
-        return uMapper.login(userName, password);  
+    public User getUser(String userName, String password) throws AuthenticationException{
+        return uMapper.getUser(userName, password);  
     }
 }

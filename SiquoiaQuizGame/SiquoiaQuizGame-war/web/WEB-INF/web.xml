@@ -19,7 +19,7 @@
     <error-page>
         <exception-type>java.lang.CommandException</exception-type>
         <location>
-            /error.jsp
+            /index.jsp
         </location>
     </error-page>
     <error-page>

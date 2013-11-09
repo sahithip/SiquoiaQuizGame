@@ -16,6 +16,13 @@ public class CommandException extends Exception{
       super(message, cause);
       this.errorTarget = errorTarget;
     }
+    
+    public CommandException(String errorTarget){
+        this.errorTarget = errorTarget;
+    }
+    
+    public CommandException(){
+    }
 
     public String getErrorTarget(){
       return errorTarget;

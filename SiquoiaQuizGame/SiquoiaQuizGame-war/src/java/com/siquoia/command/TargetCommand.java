@@ -4,7 +4,6 @@
  */
 package com.siquoia.command;
 
-import com.siquoia.exception.AuthenticationException;
 import com.siquoia.exception.CommandException;
 import javax.servlet.http.HttpServletRequest;
 
@@ -21,11 +20,10 @@ public class TargetCommand implements Command{
     
     @Override
     public String execute(HttpServletRequest request) throws CommandException {
-//        if(request.getSession().getAttribute("loggedIn")== null)
-//        {
-//            throw new CommandException(target);
-//        }
-        System.out.println("i should be here");
+        if(request.getSession().getAttribute("loggedIn")== null)
+        {
+            throw new CommandException("User session expired", "/login.jsp", new CommandException());
+        }
     return target;
   }
     
