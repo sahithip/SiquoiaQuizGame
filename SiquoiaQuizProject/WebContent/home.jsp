@@ -17,6 +17,12 @@
             <div class="logos">
                 <h1>SiQuoia</h1>
             </div>
+            <ul>
+        <li><a href="home.asp">Home</a></li>
+        <li><a href="index.asp">Play a Quiz</a></li>
+        <li><a href="submit.asp">Submit a Question</a></li>
+        <li><a href="market.asp">Marketplace</a></li>
+        </ul>
         </div>
         <div class="content">
             <h2>Welcome</h2>
