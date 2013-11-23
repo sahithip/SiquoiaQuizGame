@@ -37,7 +37,9 @@
             <a href="SiquoiaFrontController?command=logout">Logout</a>
             </table>
         </div>
-            
+            <div id="test"><p>TEST
+                </p></div>
+                $("#test p").delay(1000).animate({"opacity": "1"}, 700);
         <div class="bot">
             <p>SiQuoia © - 2013</p>
         </div>
