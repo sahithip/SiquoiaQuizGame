@@ -28,7 +28,7 @@
     <body>
         <div class="top" align="center" style="color:#0080FF">
             <div class="logos">
-                <h1>SiQuoia</h1> //replace with 
+                <h1>SiQuoia</h1> <!-- replace with sequoia img -->
             </div>
         </div>
         <div class="content">
