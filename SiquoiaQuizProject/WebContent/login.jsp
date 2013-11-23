@@ -52,6 +52,8 @@
                             <tr>
                                 <td colspan="2">
                                     <button type="submit" name="command" value="login">Log in</button>
+                               
+                                    <button type="submit" name="command" value="signup">Sign Up</button>
                                 <td>
                             </tr>
                         </table>
