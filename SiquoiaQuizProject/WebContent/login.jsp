@@ -26,9 +26,9 @@
         </script>
     </head>
     <body>
-        <div class="top">
+        <div class="top" align="center" style="color:#0080FF">
             <div class="logos">
-                <h1>SiQuoia</h1>
+                <h1>SiQuoia</h1> //replace with 
             </div>
         </div>
         <div class="content">
@@ -52,7 +52,6 @@
                             <tr>
                                 <td colspan="2">
                                     <button type="submit" name="command" value="login">Log in</button>
-                               
                                     <button type="submit" name="command" value="signup">Sign Up</button>
                                 <td>
                             </tr>
