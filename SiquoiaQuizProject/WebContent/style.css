@@ -18,6 +18,11 @@ body{
     width: 45%;
 }
 
+li
+{
+display:inline;
+}
+
 .logos{
     margin: 0 auto;
 }
