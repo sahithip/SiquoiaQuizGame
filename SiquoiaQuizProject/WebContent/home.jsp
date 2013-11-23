@@ -37,9 +37,6 @@
             <a href="SiquoiaFrontController?command=logout">Logout</a>
             </table>
         </div>
-                <div style="width: 400px; -webkit-transition: -webkit-transform 3s ease-in;" onclick="this.style.webkitTransform='rotate(360deg)'"><p align=center">
-    This div will do a spin when clicked the first time!
-                    </p></div>
                 
         <div class="bot">
             <p>SiQuoia © - 2013</p>
