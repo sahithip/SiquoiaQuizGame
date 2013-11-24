@@ -17,8 +17,8 @@ public class DBConnection {
 
 		try 
 		{
-			Class.forName("java.sql.Driver");
-			con = DriverManager.getConnection("jdbc:derby://localhost:1527/SiQuoiaDB", "patrick", "1234");
+			Class.forName("com.mysql.jdbc.Driver");
+			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/siquoia", "root", "admin");
 		} 
 		catch (SQLException e) 
 		{

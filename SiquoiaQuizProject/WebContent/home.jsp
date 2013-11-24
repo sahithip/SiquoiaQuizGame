@@ -22,20 +22,30 @@
             <h2>Welcome</h2>
             <table>
                 <tr>
+                <td>
             User name: ${loggedIn.userName}
+            </td>
                 </tr>
                 <tr>
+                <td>
             User ID:   ${loggedIn.userId}
+            </td>
                 </tr>
                 <tr>
+                <td>
             First name: ${loggedIn.firstName}
+            </td>
                 </tr>
+                
                 <tr>
+                <td>
             Last name: ${loggedIn.lastName}
+            </td>
                 </tr>
-            </table>
+                </table>
             <a href="SiquoiaFrontController?command=logout">Logout</a>
-            </table>
+            <a href="SiquoiaFrontController?command=addQue">Add Question</a>
+            <a href="SiquoiaFrontController?command=verifyQue">Verify Question</a>
         </div>
             
         <div class="bot">

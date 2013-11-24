@@ -10,7 +10,9 @@ import com.siquoia.exception.NotFoundException;
 import com.siquoia.mapper.LeaderboardMapper;
 import com.siquoia.mapper.QuizMapper;
 import com.siquoia.mapper.UserMapper;
+import com.siquoia.model.Category;
 import com.siquoia.model.User;
+
 import java.sql.Connection;
 
 /**
@@ -29,7 +31,6 @@ public class DBManager {
         dbConnection = new DBConnection();
         conn = dbConnection.getConnection();
         uMapper = new UserMapper();
-        qMapper = new QuizMapper();
         lMapper = new LeaderboardMapper();
     }
     
@@ -60,4 +61,7 @@ public class DBManager {
     public void closeConnection(){
         dbConnection.closeConnection(conn);
     }
+    
+
+	
 }
